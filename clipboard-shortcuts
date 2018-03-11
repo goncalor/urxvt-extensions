@@ -1,5 +1,15 @@
 #! perl
 
+# This extesion allows you to configure shortcuts to copy to and
+# paste from the clipboard.
+#
+# Setup:
+# - Add this file to the directory ~/.urxvt/ext/ .
+# - Add the following lines to your ~/.Xresources or ~/.Xdefaults:
+#
+#     URxvt*keysym.Control-Shift-C: clipboard-shortcuts:copy
+#     URxvt*keysym.Control-Shift-V: clipboard-shortcuts:paste
+
 sub on_action {
     my ($self, $action) = @_;
 
