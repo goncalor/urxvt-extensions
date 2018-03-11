@@ -6,7 +6,9 @@ sub on_action {
     if($action eq "copy") {
         $self->selection($self->selection(), 1);
         $self->selection_grab(urxvt::CurrentTime, 1);
-        # selection_clear ?
+    }
+    elsif($action eq "paste") {
+        $self->selection_request(urxvt::CurrentTime, 3);
     }
     ()
 }
