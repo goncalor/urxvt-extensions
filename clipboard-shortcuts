@@ -1,0 +1,12 @@
+#! perl
+
+sub on_action {
+    my ($self, $action) = @_;
+
+    if($action eq "copy") {
+        $self->selection($self->selection(), 1);
+        $self->selection_grab(urxvt::CurrentTime, 1);
+        # selection_clear ?
+    }
+    ()
+}
